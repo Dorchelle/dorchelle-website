@@ -138,17 +138,14 @@ a { text-decoration: none; color: inherit; }
 
 .hero-banner {
   width: 100%;
-  height: auto;
-  max-height: 320px;
   overflow: hidden;
+  line-height: 0;
 }
 
-.hero-banner img {
+.hero-banner svg {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-  object-fit: contain;
-  object-position: center top;
 }
 
 .hero-content {
