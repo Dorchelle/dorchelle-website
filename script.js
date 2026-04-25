@@ -1,83 +1,97 @@
-// Navbar scroll effect
+// ===========================
+// LANGUAGE TOGGLE FR / EN
+// ===========================
+let currentLang = 'fr';
+
+const langToggle = document.getElementById('langToggle');
+const langFlag   = langToggle.querySelector('.lang-flag');
+const langLabel  = langToggle.querySelector('.lang-label');
+
+function switchLanguage() {
+  currentLang = currentLang === 'fr' ? 'en' : 'fr';
+  const isEN = currentLang === 'en';
+
+  // Update button
+  langFlag.textContent  = isEN ? '🇬🇧' : '🇫🇷';
+  langLabel.textContent = isEN ? 'EN' : 'FR';
+
+  // Update html lang attribute
+  document.documentElement.lang = currentLang;
+
+  // Update all elements that have data-fr / data-en
+  document.querySelectorAll('[data-fr][data-en]').forEach(el => {
+    const text = isEN ? el.dataset.en : el.dataset.fr;
+    // Use innerHTML to support <strong>, <br> etc.
+    el.innerHTML = text;
+  });
+}
+
+langToggle.addEventListener('click', switchLanguage);
+
+// ===========================
+// NAVBAR SCROLL EFFECT
+// ===========================
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 40) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// Mobile burger menu
-const burger = document.getElementById('burger');
+// ===========================
+// MOBILE BURGER MENU
+// ===========================
+const burger   = document.getElementById('burger');
 const navLinks = document.querySelector('.nav-links');
-burger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
 
-// Close menu when a link is clicked
+burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-// Fade-in on scroll (Intersection Observer)
+// ===========================
+// FADE-IN ON SCROLL
+// ===========================
 const fadeEls = document.querySelectorAll(
   '.about-card, .research-card, .exp-card, .skills-block, .contact-card, .timeline-item'
 );
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      entry.target.style.animationDelay = (i * 0.07) + 's';
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1 });
-
 fadeEls.forEach(el => {
-  el.style.opacity = '0';
+  el.style.opacity   = '0';
   el.style.transform = 'translateY(24px)';
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  observer.observe(el);
 });
 
-// When element becomes visible
-document.querySelectorAll('.about-card, .research-card, .exp-card, .skills-block, .contact-card, .timeline-item').forEach(el => {
-  el.addEventListener('transitionend', () => {}, { once: true });
-});
-
-// Re-trigger via MutationObserver trick → use classList toggle
 const io = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
+  entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
+      setTimeout(() => {
+        entry.target.style.opacity   = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }, i * 70);
+      io.unobserve(entry.target);
     }
   });
 }, { threshold: 0.12 });
 
 fadeEls.forEach(el => io.observe(el));
 
-// Smooth active link highlight
-const sections = document.querySelectorAll('section[id]');
+// ===========================
+// ACTIVE NAV LINK HIGHLIGHT
+// ===========================
+const sections   = document.querySelectorAll('section[id]');
 const navAnchors = document.querySelectorAll('.nav-links a');
 
 window.addEventListener('scroll', () => {
   let current = '';
   sections.forEach(sec => {
-    if (window.scrollY >= sec.offsetTop - 120) {
-      current = sec.getAttribute('id');
-    }
+    if (window.scrollY >= sec.offsetTop - 120) current = sec.getAttribute('id');
   });
-
   navAnchors.forEach(a => {
-    a.style.color = '';
+    a.style.color      = '';
+    a.style.fontWeight = '400';
     if (a.getAttribute('href') === '#' + current) {
-      a.style.color = '#2c6fad';
+      a.style.color      = '#2c6fad';
       a.style.fontWeight = '500';
-    } else {
-      a.style.fontWeight = '400';
     }
   });
 });

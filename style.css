@@ -94,6 +94,31 @@ a { text-decoration: none; color: inherit; }
 
 .btn-cv:hover { background: var(--blue-mid); transform: translateY(-1px); }
 
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--blue-pale);
+  border: 1.5px solid var(--blue-light);
+  border-radius: 100px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue-deep);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.lang-toggle:hover {
+  background: var(--blue-mid);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+.lang-flag { font-size: 1rem; }
+
 .burger {
   display: none;
   background: none;

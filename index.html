@@ -13,13 +13,17 @@
   <nav class="nav" id="navbar">
     <div class="nav-logo">D.A.G</div>
     <ul class="nav-links">
-      <li><a href="#about">À propos</a></li>
-      <li><a href="#research">Recherche</a></li>
-      <li><a href="#experience">Expérience</a></li>
-      <li><a href="#skills">Compétences</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about"      data-fr="À propos"    data-en="About">À propos</a></li>
+      <li><a href="#research"   data-fr="Recherche"   data-en="Research">Recherche</a></li>
+      <li><a href="#experience" data-fr="Expérience"  data-en="Experience">Expérience</a></li>
+      <li><a href="#skills"     data-fr="Compétences" data-en="Skills">Compétences</a></li>
+      <li><a href="#contact"    data-fr="Contact"     data-en="Contact">Contact</a></li>
     </ul>
-    <a href="assets/CV_Dorchelle.pdf" download class="btn-cv">Télécharger CV</a>
+    <a href="assets/CV_Dorchelle.pdf" download class="btn-cv" data-fr="Télécharger CV" data-en="Download CV">Télécharger CV</a>
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+      <span class="lang-flag">🇫🇷</span>
+      <span class="lang-label">FR</span>
+    </button>
     <button class="burger" id="burger">&#9776;</button>
   </nav>
 
@@ -30,25 +34,31 @@
     </div>
     <div class="hero-content">
       <div class="hero-photo-wrap">
-        <img src="assets/photo.jpg" alt="Dorchelle Atonzong-Guedia" class="hero-photo" />
+        <img src="assets/photo.png" alt="Dorchelle Atonzong-Guedia" class="hero-photo" />
       </div>
       <div class="hero-text">
-        <p class="hero-tag">PhD Candidate · Statisticienne · Économiste</p>
+        <p class="hero-tag"
+           data-fr="PhD Candidate · Statisticienne · Économiste"
+           data-en="PhD Candidate · Statistician · Economist">
+          PhD Candidate · Statisticienne · Économiste
+        </p>
         <h1>Dorchelle<br /><em>Atonzong-Guedia</em></h1>
-        <p class="hero-sub">
+        <p class="hero-sub"
+           data-fr="Je transforme des données complexes en insights clairs grâce aux modèles Bayésiens hiérarchiques, à l'économétrie et à l'apprentissage statistique."
+           data-en="I turn complex data into clear insights through hierarchical Bayesian models, econometrics, and statistical learning.">
           Je transforme des données complexes en insights clairs grâce aux modèles Bayésiens hiérarchiques,
           à l'économétrie et à l'apprentissage statistique.
         </p>
         <div class="hero-cta">
-          <a href="#research" class="btn-primary">Voir mes recherches</a>
-          <a href="#contact" class="btn-ghost">Me contacter</a>
+          <a href="#research" class="btn-primary" data-fr="Voir mes recherches" data-en="View my research">Voir mes recherches</a>
+          <a href="#contact"  class="btn-ghost"   data-fr="Me contacter"        data-en="Contact me">Me contacter</a>
         </div>
       </div>
     </div>
     <div class="hero-stats">
-      <div class="stat"><span>5+</span><p>Conférences internationales</p></div>
-      <div class="stat"><span>4+</span><p>Années de doctorat</p></div>
-      <div class="stat"><span>10+</span><p>Outils statistiques</p></div>
+      <div class="stat"><span>5+</span><p data-fr="Conférences internationales" data-en="International conferences">Conférences internationales</p></div>
+      <div class="stat"><span>4+</span><p data-fr="Années de doctorat"          data-en="Years of PhD research">Années de doctorat</p></div>
+      <div class="stat"><span>10+</span><p data-fr="Outils statistiques"        data-en="Statistical tools">Outils statistiques</p></div>
     </div>
   </header>
 
@@ -56,44 +66,49 @@
   <section class="section about" id="about">
     <div class="container two-col">
       <div class="about-text">
-        <span class="section-label">À propos</span>
-        <h2>Statisticienne passionnée<br />par l'impact réel</h2>
-        <p>
+        <span class="section-label" data-fr="À propos" data-en="About">À propos</span>
+        <h2 data-fr="Statisticienne passionnée<br />par l'impact réel"
+            data-en="Statistician passionate<br />about real-world impact">
+          Statisticienne passionnée<br />par l'impact réel
+        </h2>
+        <p data-fr="Doctorante en statistiques appliquées à l'Université de Montréal, je me spécialise dans les <strong>modèles Bayésiens hiérarchiques semi-paramétriques spatio-temporels</strong> pour la prédiction, le regroupement aléatoire et l'analyse de données mixtes en haute dimension."
+           data-en="PhD candidate in applied statistics at Université de Montréal, I specialize in <strong>semi-parametric hierarchical Bayesian spatio-temporal models</strong> for prediction, random clustering, and high-dimensional mixed data analysis.">
           Doctorante en statistiques appliquées à l'Université de Montréal, je me spécialise dans les
           <strong>modèles Bayésiens hiérarchiques semi-paramétriques spatio-temporels</strong> pour la prédiction,
           le regroupement aléatoire et l'analyse de données mixtes en haute dimension.
         </p>
-        <p>
+        <p data-fr="Titulaire d'un diplôme d'Ingénieure Statisticienne Économiste (ISE) de l'ISSEA (Cameroun), j'ai acquis une solide expérience en analyse de données, en politique publique et en recherche académique."
+           data-en="Holding a Statistical Economist Engineer degree (ISE) from ISSEA (Cameroon), I have built strong expertise in data analysis, public policy, and academic research.">
           Titulaire d'un diplôme d'Ingénieure Statisticienne Économiste (ISE) de l'ISSEA (Cameroun), j'ai acquis
           une solide expérience en analyse de données, en politique publique et en recherche académique.
         </p>
         <div class="about-tags">
-          <span>Modélisation Bayésienne</span>
-          <span>Économétrie</span>
-          <span>Analyse spatiale</span>
-          <span>Politique publique</span>
-          <span>Consulting statistique</span>
+          <span data-fr="Modélisation Bayésienne"  data-en="Bayesian Modeling">Modélisation Bayésienne</span>
+          <span data-fr="Économétrie"              data-en="Econometrics">Économétrie</span>
+          <span data-fr="Analyse spatiale"         data-en="Spatial Analysis">Analyse spatiale</span>
+          <span data-fr="Politique publique"       data-en="Public Policy">Politique publique</span>
+          <span data-fr="Consulting statistique"  data-en="Statistical Consulting">Consulting statistique</span>
         </div>
       </div>
       <div class="about-visual">
         <div class="about-card">
           <div class="about-card-icon">🎓</div>
-          <h4>Formation</h4>
-          <p>PhD Université de Montréal</p>
-          <p>ISE — ISSEA, Cameroun</p>
-          <p>Bachelor Mathématiques, Dschang</p>
+          <h4 data-fr="Formation" data-en="Education">Formation</h4>
+          <p data-fr="PhD Université de Montréal"       data-en="PhD Université de Montréal">PhD Université de Montréal</p>
+          <p data-fr="ISE — ISSEA, Cameroun"            data-en="ISE — ISSEA, Cameroon">ISE — ISSEA, Cameroun</p>
+          <p data-fr="Bachelor Mathématiques, Dschang"  data-en="Bachelor in Mathematics, Dschang">Bachelor Mathématiques, Dschang</p>
         </div>
         <div class="about-card">
           <div class="about-card-icon">🌍</div>
-          <h4>Langues</h4>
-          <p>Français — Courant</p>
-          <p>Anglais — Courant</p>
+          <h4 data-fr="Langues" data-en="Languages">Langues</h4>
+          <p data-fr="Français — Courant" data-en="French — Fluent">Français — Courant</p>
+          <p data-fr="Anglais — Courant" data-en="English — Fluent">Anglais — Courant</p>
         </div>
         <div class="about-card">
           <div class="about-card-icon">✈️</div>
-          <h4>Localisation</h4>
-          <p>Montréal, Canada</p>
-          <p>Origine: Cameroun</p>
+          <h4 data-fr="Localisation" data-en="Location">Localisation</h4>
+          <p data-fr="Montréal, Canada" data-en="Montreal, Canada">Montréal, Canada</p>
+          <p data-fr="Origine: Cameroun" data-en="Origin: Cameroon">Origine: Cameroun</p>
         </div>
       </div>
     </div>
@@ -102,35 +117,42 @@
   <!-- RESEARCH -->
   <section class="section research" id="research">
     <div class="container">
-      <span class="section-label light">Recherche</span>
-      <h2 class="centered">Mes axes de recherche</h2>
+      <span class="section-label light" data-fr="Recherche" data-en="Research">Recherche</span>
+      <h2 class="centered" data-fr="Mes axes de recherche" data-en="My research areas">Mes axes de recherche</h2>
       <div class="research-grid">
         <div class="research-card main">
           <div class="research-num">01</div>
-          <h3>Modèles Bayésiens Hiérarchiques Spatio-temporels</h3>
-          <p>
+          <h3 data-fr="Modèles Bayésiens Hiérarchiques Spatio-temporels"
+              data-en="Spatio-temporal Hierarchical Bayesian Models">
+            Modèles Bayésiens Hiérarchiques Spatio-temporels
+          </h3>
+          <p data-fr="Développement de modèles semi-paramétriques pour la prédiction, l'analyse de relations spatiales et le regroupement aléatoire sur des données mixtes en haute dimension. Implémentation en R, Python et C++."
+             data-en="Development of semi-parametric models for prediction, spatial relationship analysis, and random clustering on high-dimensional mixed data. Implementation in R, Python, and C++.">
             Développement de modèles semi-paramétriques pour la prédiction, l'analyse de relations spatiales
             et le regroupement aléatoire sur des données mixtes en haute dimension. Implémentation en R, Python et C++.
           </p>
         </div>
         <div class="research-card">
           <div class="research-num">02</div>
-          <h3>Analyse Spatiale des Maladies</h3>
-          <p>
+          <h3 data-fr="Analyse Spatiale des Maladies" data-en="Spatial Disease Analysis">Analyse Spatiale des Maladies</h3>
+          <p data-fr="Thèse sur l'analyse spatiale de la transmission du VIH/SIDA en Afrique, combinant méthodes géostatistiques et données épidémiologiques."
+             data-en="Thesis on the spatial analysis of HIV/AIDS transmission in Africa, combining geostatistical methods and epidemiological data.">
             Thèse sur l'analyse spatiale de la transmission du VIH/SIDA en Afrique, combinant méthodes géostatistiques et données épidémiologiques.
           </p>
         </div>
         <div class="research-card">
           <div class="research-num">03</div>
-          <h3>Évaluation d'Impact & Politique Publique</h3>
-          <p>
+          <h3 data-fr="Évaluation d'Impact & Politique Publique" data-en="Impact Evaluation & Public Policy">Évaluation d'Impact & Politique Publique</h3>
+          <p data-fr="Modélisation de l'impact des programmes de fidélisation sur le comportement de consommation et le taux de désabonnement (Orange Cameroun)."
+             data-en="Modeling the impact of loyalty programs on consumer behavior and churn rate (Orange Cameroon).">
             Modélisation de l'impact des programmes de fidélisation sur le comportement de consommation et le taux de désabonnement (Orange Cameroun).
           </p>
         </div>
         <div class="research-card">
           <div class="research-num">04</div>
-          <h3>Théorie de l'Échantillonnage</h3>
-          <p>
+          <h3 data-fr="Théorie de l'Échantillonnage" data-en="Sampling Theory">Théorie de l'Échantillonnage</h3>
+          <p data-fr="Analyse de données orientée politique, méthodes d'échantillonnage avancées pour des études à grande échelle."
+             data-en="Policy-oriented data analysis, advanced sampling methods for large-scale studies.">
             Analyse de données orientée politique, méthodes d'échantillonnage avancées pour des études à grande échelle.
           </p>
         </div>
@@ -141,14 +163,14 @@
   <!-- CONFERENCES -->
   <section class="section conferences" id="conferences">
     <div class="container">
-      <span class="section-label">Conférences</span>
-      <h2>Présentations & Événements</h2>
+      <span class="section-label" data-fr="Conférences" data-en="Conferences">Conférences</span>
+      <h2 data-fr="Présentations & Événements" data-en="Presentations & Events">Présentations & Événements</h2>
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-year">2025</div>
           <div class="timeline-content">
             <h4>Annual International Conference — Women in Mathematics & CRM</h4>
-            <p>Centre de Recherches Mathématiques, Montréal, Canada</p>
+            <p data-fr="Centre de Recherches Mathématiques, Montréal, Canada" data-en="Centre de Recherches Mathématiques, Montreal, Canada">Centre de Recherches Mathématiques, Montréal, Canada</p>
           </div>
         </div>
         <div class="timeline-item">
@@ -161,29 +183,38 @@
         <div class="timeline-item">
           <div class="timeline-year">2024–2025</div>
           <div class="timeline-content">
-            <h4>CFIRD — Colloque francophone interfacultaire de biostatistiques</h4>
-            <p>Montréal, Canada</p>
+            <h4 data-fr="CFIRD — Colloque francophone interfacultaire de biostatistiques"
+                data-en="CFIRD — Francophone Interfaculty Colloquium on Biostatistics">
+              CFIRD — Colloque francophone interfacultaire de biostatistiques
+            </h4>
+            <p data-fr="Montréal, Canada" data-en="Montreal, Canada">Montréal, Canada</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-year">2023</div>
           <div class="timeline-content">
-            <h4>11e Conférence canadienne des étudiants en statistique</h4>
-            <p>Société statistique du Canada, Ottawa</p>
+            <h4 data-fr="11e Conférence canadienne des étudiants en statistique"
+                data-en="11th Canadian Statistics Student Conference">
+              11e Conférence canadienne des étudiants en statistique
+            </h4>
+            <p data-fr="Société statistique du Canada, Ottawa" data-en="Statistical Society of Canada, Ottawa">Société statistique du Canada, Ottawa</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-year">2022</div>
           <div class="timeline-content">
             <h4>ISBA — International Society for Bayesian Analysis</h4>
-            <p>Montréal, Canada</p>
+            <p data-fr="Montréal, Canada" data-en="Montreal, Canada">Montréal, Canada</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-year">2021–2022</div>
           <div class="timeline-content">
-            <h4>Colloque pan-québécois — Institut des sciences mathématiques</h4>
-            <p>Québec, Canada</p>
+            <h4 data-fr="Colloque pan-québécois — Institut des sciences mathématiques"
+                data-en="Pan-Quebec Colloquium — Institute of Mathematical Sciences">
+              Colloque pan-québécois — Institut des sciences mathématiques
+            </h4>
+            <p data-fr="Québec, Canada" data-en="Quebec, Canada">Québec, Canada</p>
           </div>
         </div>
       </div>
@@ -193,33 +224,36 @@
   <!-- EXPERIENCE -->
   <section class="section experience" id="experience">
     <div class="container">
-      <span class="section-label light">Parcours</span>
-      <h2 class="centered">Expérience professionnelle</h2>
+      <span class="section-label light" data-fr="Parcours" data-en="Career">Parcours</span>
+      <h2 class="centered" data-fr="Expérience professionnelle" data-en="Professional Experience">Expérience professionnelle</h2>
       <div class="exp-grid">
         <div class="exp-card current">
-          <div class="exp-badge">En cours</div>
-          <h3>Chargée de cours & Assistante d'enseignement</h3>
-          <p class="exp-where">Université de Montréal · 2021 – Présent</p>
+          <div class="exp-badge" data-fr="En cours" data-en="Ongoing">En cours</div>
+          <h3 data-fr="Chargée de cours & Assistante d'enseignement" data-en="Lecturer & Teaching Assistant">Chargée de cours & Assistante d'enseignement</h3>
+          <p class="exp-where" data-fr="Université de Montréal · 2021 – Présent" data-en="Université de Montréal · 2021 – Present">Université de Montréal · 2021 – Présent</p>
           <ul>
-            <li>Calcul différentiel, Algèbre linéaire</li>
-            <li>Probabilités & Statistiques</li>
-            <li>Régression linéaire, Théorie de l'échantillonnage</li>
-            <li>Statistiques pour les sciences sociales</li>
+            <li data-fr="Calcul différentiel, Algèbre linéaire"                data-en="Differential calculus, Linear algebra">Calcul différentiel, Algèbre linéaire</li>
+            <li data-fr="Probabilités & Statistiques"                          data-en="Probability & Statistics">Probabilités & Statistiques</li>
+            <li data-fr="Régression linéaire, Théorie de l'échantillonnage"    data-en="Linear regression, Sampling theory">Régression linéaire, Théorie de l'échantillonnage</li>
+            <li data-fr="Statistiques pour les sciences sociales"              data-en="Statistics for social sciences">Statistiques pour les sciences sociales</li>
           </ul>
         </div>
         <div class="exp-card">
-          <h3>Assistante technique — Soutien aux examens</h3>
-          <p class="exp-where">Université de Montréal · 2022 – Présent</p>
+          <h3 data-fr="Assistante technique — Soutien aux examens" data-en="Technical Assistant — Exam Support">Assistante technique — Soutien aux examens</h3>
+          <p class="exp-where" data-fr="Université de Montréal · 2022 – Présent" data-en="Université de Montréal · 2022 – Present">Université de Montréal · 2022 – Présent</p>
           <ul>
-            <li>Support aux étudiants en situation de handicap lors des examens</li>
+            <li data-fr="Support aux étudiants en situation de handicap lors des examens"
+                data-en="Support for students with disabilities during exams">
+              Support aux étudiants en situation de handicap lors des examens
+            </li>
           </ul>
         </div>
         <div class="exp-card">
-          <h3>Stage — Customer Base Management</h3>
-          <p class="exp-where">Orange Cameroun · Douala · 2019</p>
+          <h3 data-fr="Stage — Customer Base Management" data-en="Internship — Customer Base Management">Stage — Customer Base Management</h3>
+          <p class="exp-where" data-fr="Orange Cameroun · Douala · 2019" data-en="Orange Cameroon · Douala · 2019">Orange Cameroun · Douala · 2019</p>
           <ul>
-            <li>Analyse de l'impact des programmes de fidélisation</li>
-            <li>Modélisation du comportement de consommation et du churn</li>
+            <li data-fr="Analyse de l'impact des programmes de fidélisation" data-en="Analysis of loyalty program impact">Analyse de l'impact des programmes de fidélisation</li>
+            <li data-fr="Modélisation du comportement de consommation et du churn" data-en="Modeling consumer behavior and churn rate">Modélisation du comportement de consommation et du churn</li>
           </ul>
         </div>
       </div>
@@ -229,41 +263,41 @@
   <!-- SKILLS -->
   <section class="section skills" id="skills">
     <div class="container">
-      <span class="section-label">Compétences</span>
-      <h2>Outils & Savoir-faire</h2>
+      <span class="section-label" data-fr="Compétences" data-en="Skills">Compétences</span>
+      <h2 data-fr="Outils & Savoir-faire" data-en="Tools & Expertise">Outils & Savoir-faire</h2>
       <div class="skills-grid">
         <div class="skills-block">
-          <h4>Langages de programmation</h4>
+          <h4 data-fr="Langages de programmation" data-en="Programming Languages">Langages de programmation</h4>
           <div class="skill-pills">
             <span>R</span><span>Python</span><span>C++</span><span>SQL</span>
             <span>SAS</span><span>STATA</span><span>SPSS</span><span>SPAD</span>
           </div>
         </div>
         <div class="skills-block">
-          <h4>Logiciels & Bureautique</h4>
+          <h4 data-fr="Logiciels & Bureautique" data-en="Software & Office Tools">Logiciels & Bureautique</h4>
           <div class="skill-pills">
             <span>LaTeX</span><span>Beamer</span><span>Excel</span>
             <span>PowerPoint</span><span>Word</span><span>Access</span>
           </div>
         </div>
         <div class="skills-block">
-          <h4>Domaines d'expertise</h4>
+          <h4 data-fr="Domaines d'expertise" data-en="Areas of Expertise">Domaines d'expertise</h4>
           <div class="skill-pills">
-            <span>Modélisation Bayésienne</span>
-            <span>Économétrie</span>
-            <span>Analyse spatiale</span>
-            <span>Clustering aléatoire</span>
-            <span>Impact Evaluation</span>
-            <span>Théorie de l'échantillonnage</span>
+            <span data-fr="Modélisation Bayésienne"       data-en="Bayesian Modeling">Modélisation Bayésienne</span>
+            <span data-fr="Économétrie"                   data-en="Econometrics">Économétrie</span>
+            <span data-fr="Analyse spatiale"              data-en="Spatial Analysis">Analyse spatiale</span>
+            <span data-fr="Clustering aléatoire"          data-en="Random Clustering">Clustering aléatoire</span>
+            <span data-fr="Impact Evaluation"             data-en="Impact Evaluation">Impact Evaluation</span>
+            <span data-fr="Théorie de l'échantillonnage"  data-en="Sampling Theory">Théorie de l'échantillonnage</span>
           </div>
         </div>
         <div class="skills-block">
-          <h4>Compétences transversales</h4>
+          <h4 data-fr="Compétences transversales" data-en="Soft Skills">Compétences transversales</h4>
           <div class="skill-pills">
-            <span>Travail en équipe</span>
-            <span>Communication scientifique</span>
-            <span>Résilience</span>
-            <span>Consulting</span>
+            <span data-fr="Travail en équipe"           data-en="Teamwork">Travail en équipe</span>
+            <span data-fr="Communication scientifique"  data-en="Scientific Communication">Communication scientifique</span>
+            <span data-fr="Résilience"                  data-en="Resilience">Résilience</span>
+            <span data-fr="Consulting"                  data-en="Consulting">Consulting</span>
           </div>
         </div>
       </div>
@@ -273,34 +307,33 @@
   <!-- CONTACT -->
   <section class="section contact" id="contact">
     <div class="container contact-inner">
-      <span class="section-label light">Contact</span>
-      <h2>Travaillons ensemble</h2>
-      <p class="contact-sub">
+      <span class="section-label light" data-fr="Contact" data-en="Contact">Contact</span>
+      <h2 data-fr="Travaillons ensemble" data-en="Let's work together">Travaillons ensemble</h2>
+      <p class="contact-sub"
+         data-fr="Intéressé·e par une collaboration, une consultation, ou simplement pour échanger sur la recherche ?"
+         data-en="Interested in collaborating, consulting, or simply discussing research?">
         Intéressé·e par une collaboration, une consultation, ou simplement pour échanger sur la recherche ?
       </p>
       <div class="contact-cards">
         <a href="mailto:dguedia@gmail.com" class="contact-card">
           <div class="contact-icon">✉️</div>
-          <h4>Email personnel</h4>
+          <h4 data-fr="Email personnel" data-en="Personal Email">Email personnel</h4>
           <p>dguedia@gmail.com</p>
         </a>
         <a href="mailto:dorchelle.atonzongguedia@umontreal.ca" class="contact-card">
           <div class="contact-icon">🎓</div>
-          <h4>Email académique</h4>
+          <h4 data-fr="Email académique" data-en="Academic Email">Email académique</h4>
           <p>dorchelle.atonzongguedia@umontreal.ca</p>
-        </a>
-        <a href="tel:+14389952432" class="contact-card">
-          <div class="contact-icon">📞</div>
-          <h4>Téléphone</h4>
-          <p>+1 (438) 995-2432</p>
         </a>
         <a href="https://www.linkedin.com/in/dorchelle-atonzong-guedia-3009a21b2/" target="_blank" class="contact-card">
           <div class="contact-icon">💼</div>
           <h4>LinkedIn</h4>
-          <p>Voir mon profil</p>
+          <p data-fr="Voir mon profil" data-en="View my profile">Voir mon profil</p>
         </a>
       </div>
-      <a href="assets/CV_Dorchelle.pdf" download class="btn-primary large">
+      <a href="assets/CV_Dorchelle.pdf" download class="btn-primary large"
+         data-fr="⬇ Télécharger mon CV complet"
+         data-en="⬇ Download my full CV">
         ⬇ Télécharger mon CV complet
       </a>
     </div>
@@ -309,7 +342,11 @@
   <!-- FOOTER -->
   <footer class="footer">
     <p>© 2025 Dorchelle Atonzong-Guedia · Montréal, Canada</p>
-    <p class="footer-sub">Conçu avec soin · Statistique, Données & Impact</p>
+    <p class="footer-sub"
+       data-fr="Conçu avec soin · Statistique, Données & Impact"
+       data-en="Crafted with care · Statistics, Data & Impact">
+      Conçu avec soin · Statistique, Données & Impact
+    </p>
   </footer>
 
   <script src="script.js"></script>
