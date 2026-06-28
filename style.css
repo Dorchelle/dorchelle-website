@@ -729,3 +729,239 @@ h2.centered { text-align: center; }
   .hero-banner { height: 140px; }
   .section { padding: 4rem 1.2rem; }
 }
+
+/* ===========================
+   TUTORING PAGE
+   =========================== */
+
+.active-link {
+  color: var(--blue-mid) !important;
+  font-weight: 500 !important;
+}
+
+/* Hero */
+.tutor-hero {
+  background: var(--blue-deep);
+  padding: 8rem 2rem 5rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+.tutor-hero-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.tutor-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.25;
+  margin: 1.2rem 0 1.5rem;
+}
+
+.tutor-hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.7;
+  margin-bottom: 2.2rem;
+}
+
+/* Subjects */
+.tutor-subjects { background: var(--cream); text-align: center; }
+.tutor-subjects h2 { text-align: center; }
+.tutor-subjects .section-label { display: block; margin: 0 auto 1.2rem; width: fit-content; }
+
+.tutor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  margin: 2.5rem 0 2.5rem;
+  text-align: left;
+}
+
+.tutor-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 2.2rem 1.8rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.tutor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tutor-card-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+
+.tutor-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--blue-deep);
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+}
+
+.tutor-card p {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.tutor-levels {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+.level-pill {
+  background: var(--blue-pale);
+  color: var(--blue-deep);
+  padding: 0.45rem 1.1rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Why choose me */
+.tutor-why { background: var(--blue-deep); }
+.tutor-why h2 { color: var(--white); }
+.tutor-why .section-label.light { display: block; margin: 0 auto 1.2rem; width: fit-content; }
+
+.tutor-why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
+}
+
+.why-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: background 0.25s;
+}
+
+.why-card:hover { background: rgba(255,255,255,0.1); }
+
+.why-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: rgba(107, 181, 232, 0.45);
+  line-height: 1;
+  margin-bottom: 0.6rem;
+}
+
+.why-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 0.6rem;
+}
+
+.why-card p {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.65;
+}
+
+/* How it works */
+.tutor-howto { background: var(--cream); text-align: center; }
+.tutor-howto h2 { text-align: center; }
+.tutor-howto .section-label { display: block; margin: 0 auto 1.2rem; width: fit-content; }
+
+.howto-steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.howto-step {
+  flex: 1;
+  min-width: 200px;
+  max-width: 260px;
+}
+
+.howto-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--blue-deep);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+}
+
+.howto-step h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--blue-deep);
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+.howto-step p {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+
+.howto-arrow {
+  font-size: 1.6rem;
+  color: var(--blue-light);
+  align-self: center;
+  margin-top: 1.2rem;
+}
+
+/* Tutor contact */
+.tutor-contact { background: var(--blue-deep); text-align: center; }
+.tutor-contact-inner { max-width: 700px; margin: 0 auto; }
+.tutor-contact h2 { color: var(--white); }
+
+.tutor-contact-sub {
+  font-size: 1.02rem;
+  color: rgba(255,255,255,0.72);
+  margin-bottom: 2.2rem;
+  line-height: 1.7;
+}
+
+.tutor-email-card {
+  max-width: 320px;
+  margin: 0 auto 2rem;
+  display: block;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--blue-light);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover { color: var(--white); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tutor-grid { grid-template-columns: 1fr; }
+  .tutor-why-grid { grid-template-columns: 1fr; }
+  .howto-steps { flex-direction: column; align-items: center; }
+  .howto-arrow { display: none; }
+  .tutor-hero { padding: 7rem 1.2rem 3.5rem; }
+}
