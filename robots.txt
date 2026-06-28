@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dorchelle.github.io/dorchelle-website/sitemap.xml
