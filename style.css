@@ -830,6 +830,59 @@ h2.centered { text-align: center; }
   font-weight: 500;
 }
 
+/* Research / scientific support section */
+.tutor-research { background: var(--white); text-align: center; }
+.tutor-research h2 { text-align: center; max-width: 760px; margin: 0 auto 1rem; }
+.tutor-research .section-label.light {
+  display: block;
+  margin: 0 auto 1.2rem;
+  width: fit-content;
+  background: rgba(44, 111, 173, 0.12);
+  color: var(--blue-mid);
+}
+
+.tutor-research-intro {
+  max-width: 640px;
+  margin: 0 auto 2.5rem;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.research-support-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.research-support-card {
+  background: var(--blue-pale);
+  border-radius: var(--radius);
+  padding: 2.2rem 1.8rem;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.research-support-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.research-support-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--blue-deep);
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+}
+
+.research-support-card p {
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
 /* Why choose me */
 .tutor-why { background: var(--blue-deep); }
 .tutor-why h2 { color: var(--white); }
@@ -961,6 +1014,7 @@ h2.centered { text-align: center; }
 @media (max-width: 768px) {
   .tutor-grid { grid-template-columns: 1fr; }
   .tutor-why-grid { grid-template-columns: 1fr; }
+  .research-support-grid { grid-template-columns: 1fr; }
   .howto-steps { flex-direction: column; align-items: center; }
   .howto-arrow { display: none; }
   .tutor-hero { padding: 7rem 1.2rem 3.5rem; }
